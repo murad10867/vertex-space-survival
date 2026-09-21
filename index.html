@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#030713">
+  <meta name="description" content="Vertex Space Survival">
+  <title>Vertex Space Survival</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="security.js" defer></script>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span>🧑‍🚀</span><div><strong>Vertex Space Survival</strong><small>Vertex Games</small></div></div>
+    <button id="restartBtn">إعادة</button>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <span>DEEP SPACE SURVIVAL</span>
+      <h1>البقاء في الفضاء</h1>
+      <p>اجمع الأكسجين والطاقة، تجنب النيازك، واصمد 60 ثانية.</p>
+    </section>
+
+    <section class="game-layout">
+      <aside class="panel">
+        <div><span>الأكسجين</span><strong id="oxygen">100%</strong></div>
+        <div><span>الطاقة</span><strong id="energy">100%</strong></div>
+        <div><span>الوقت</span><strong id="time">60</strong></div>
+        <div><span>النقاط</span><strong id="score">0</strong></div>
+        <p>الحركة: الأسهم أو WASD<br>🔵 أكسجين — 🟡 طاقة — ☄️ خطر</p>
+      </aside>
+
+      <section class="game-card">
+        <canvas id="gameCanvas" width="900" height="620"></canvas>
+        <div id="overlay" class="overlay show">
+          <div>
+            <span id="overlayIcon">🧑‍🚀</span>
+            <h2 id="overlayTitle">جاهز للمهمة؟</h2>
+            <p id="overlayText">اصمد دقيقة كاملة وحافظ على الأكسجين والطاقة.</p>
+            <button id="startBtn">ابدأ المهمة</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mobile-controls">
+      <button data-dir="up">↑</button>
+      <div>
+        <button data-dir="left">←</button>
+        <button data-dir="down">↓</button>
+        <button data-dir="right">→</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Vertex Systems AI © 2026</footer>
+</body>
+</html>
